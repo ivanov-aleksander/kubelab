@@ -1,0 +1,62 @@
+# Create persistent disks for nginx 
+gcloud compute disks create webcontent-blue webcontent-green --zone europe-west1-d --size 1GB
+
+# Create temporary container with NGINX
+kubectl create -f ops.yaml
+# List all pods in the namespace
+kubectl get pods
+# Run command in existing pod (1 container case)
+kubectl exec -it ops -- bash
+# Copy files
+cp /usr/share/nginx/html/* nginx-blue/
+cp /usr/share/nginx/html/* nginx-green/
+sed -i -e 's/Welcome to nginx!/Welcome to blue nginx!/g' nginx-blue/index.html
+sed -i -e 's/Welcome to nginx!/Welcome to green nginx!/g' nginx-green/index.html
+ls /nginx-blue/index.html
+ls /nginx-green/index.html
+exit
+# Delete Deployment
+kubectl delete -f ops.yaml
+
+
+
+kubectl create -f service.yaml
+kubectl get svc webserver
+kubectl create -f blue.yaml
+kubectl create -f green.yaml
+
+#Loock at pod's ip addresses
+kubectl get pods -o wide
+kubectl  get ep
+#Loock at NodePort
+kubectl describe svc webserver
+
+# Check our blue deployment
+curl http://{EXTERNAL-IP}
+# Change from blue to green
+kubectl edit svc webserver
+# Check our green deployment
+curl http://{EXTERNAL-IP}
+kubectl  get ep
+
+
+
+
+
+kubectl get po
+kubectl scale  --replicas=15 deployment/webserver-blue
+kubectl get pods |grep webserver-blue| wc -l
+CONTAINERID=79c7885865-znp2c
+kubectl exec -it webserver-blue-${CONTAINERID} -- nginx -v
+# Deployment update
+kubectl set image deployment/webserver-blue nginx=nginx:1.13.12
+kubectl get pods
+kubectl  rollout status deployment webserver-blue
+kubectl exec -it webserver-blue-${CONTAINER-ID} -- nginx -v 
+
+
+# Delete kubernetes resources
+kubectl delete -f blue.yaml,green.yaml,service.yaml
+# Delete persistent disk
+gcloud compute disks delete webcontent-blue webcontent-green  --zone europe-west1-d
+gcloud compute disks list  --zones europe-west1-d

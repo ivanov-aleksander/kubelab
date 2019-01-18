@@ -1,0 +1,18 @@
+# Create NGINX service 
+kubectl create -f nginx-service.yml
+# Deploy NGINX 
+kubectl create -f nginx.yml
+# Check nginx pods
+kubectl get pods 
+# Or You can see list all pods in all namespaces
+kubectl get pods --all-namespaces
+# Check Service
+kubectl get svc
+# Check nginx via curl
+curl http://{EXTERNAL-IP}
+
+# Delete NGINX
+kubectl delete -f nginx.yml
+kubectl delete -f nginx-service.yml
+# Or you can use the following command:
+kubectl delete -f nginx.yml,nginx-service.yml
