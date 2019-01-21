@@ -2,98 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e08f74fa-6a8e-4f49-a733-072b9afcb6c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/influxdb/grafana.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/influxdb/grafana.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/standalone-with-apiserver/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/standalone-with-apiserver/common.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/standalone-with-apiserver/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube-config/standalone-with-apiserver/startup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/deploy/kube.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/grafana/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/grafana/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/hooks/check_boilerplate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/hooks/check_boilerplate.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/hooks/check_gofmt.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/hooks/check_gofmt.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/hooks/coverage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/hooks/coverage.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/hooks/run_vet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/hooks/run_vet.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/integration/.jenkins.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/integration/.jenkins.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/query.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/query.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/query_last.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/client/query_last.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/bluebreezecf/opentsdb-goclient/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/dce.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/dce.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/doc.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/doc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/node.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/time.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/uuid.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/pborman/uuid/uuid.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/riemann/riemann-go-client/integration.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/riemann/riemann-go-client/integration.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/prebuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/prebuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/github.com/ugorji/go/codec/tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mkall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mkall.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mkerrors.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mkerrors.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksyscall.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksyscall.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksyscall_solaris.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksyscall_solaris.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysctl_openbsd.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysctl_openbsd.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_darwin.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_darwin.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_dragonfly.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_dragonfly.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_freebsd.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_freebsd.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_linux.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_linux.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_netbsd.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_netbsd.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_openbsd.pl" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/golang.org/x/sys/unix/mksysnum_openbsd.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/appengine/internal/datastore/datastore_v3.proto" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/appengine/internal/datastore/datastore_v3.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/appengine/internal/regen.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/appengine/internal/regen.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/grpc/codegen.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/grpc/codegen.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/grpc/coverage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/google.golang.org/grpc/coverage.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v3/run-es.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v3/run-es.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.0.0.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.0.0.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.0.1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.0.1.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.1.1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.1.1.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.1.2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.1.2.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.0.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.0.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.1.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.2.2.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.3.0.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/gopkg.in/olivere/elastic.v5/run-es-5.3.0.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/errors/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/errors/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/meta/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/meta/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/resource/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/api/resource/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/apis/meta/v1/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apimachinery/pkg/apis/meta/v1/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/authorization/authorizerfactory/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/authorization/authorizerfactory/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/filters/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/filters/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters/status.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/handlers/responsewriters/status.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/handlers/watch.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/handlers/watch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/metrics/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/metrics/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/openapi/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/openapi/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/request/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/endpoints/request/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/registry/generic/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/registry/generic/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/registry/rest/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/registry/rest/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/filters/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/filters/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/mux/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/mux/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/openapi/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/openapi/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/options/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/options/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/routes/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/server/routes/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/etcd/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/etcd/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/etcd3/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/etcd3/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/storagebackend/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/storage/storagebackend/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/util/webhook/webhook.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/pkg/util/webhook/webhook.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/plugin/pkg/authorizer/webhook/gencerts.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/apiserver/plugin/pkg/authorizer/webhook/gencerts.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/api/install/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/api/install/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/api/v1/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/api/v1/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/apps/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/apps/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/authentication/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/authentication/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/authorization/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/authorization/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/autoscaling/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/autoscaling/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/batch/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/batch/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/certificates/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/certificates/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/extensions/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/extensions/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/policy/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/policy/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/rbac/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/rbac/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/storage/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/pkg/apis/storage/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/rest/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/rest/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/cache/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/cache/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/cache/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/cache/store.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/metrics/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/tools/metrics/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/transport/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/heapster/vendor/k8s.io/client-go/transport/OWNERS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/qps/create_service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/qps/create_service.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/qps/qps-autoscaler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/qps/qps-autoscaler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/qps/qps-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/qps/qps-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03 scailing/qps/run-load-generator.sh" beforeDir="false" afterPath="$PROJECT_DIR$/03 scailing/qps/run-load-generator.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04 StatefullSet/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04 StatefullSet/demo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/00 Prep/demo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00 Prep/demo.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,79 +15,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03 scailing/demo.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="53" lean-forward="true" selection-start-line="14" selection-end-line="15" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/ops.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/green.yaml">
+        <entry file="file://$PROJECT_DIR$/04 StatefullSet/demo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state>
+              <caret selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/demo.txt">
+        <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-configmap.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03 scailing/nginx.yml">
+        <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="1564">
+              <caret line="94" column="24" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="24" />
+              <folding>
+                <element signature="e#70#113#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cla</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/03 scailing/heapster" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/00 Prep/demo.txt" />
         <option value="$PROJECT_DIR$/02 blue-green-deployment/ops.yaml" />
         <option value="$PROJECT_DIR$/02 blue-green-deployment/demo.txt" />
         <option value="$PROJECT_DIR$/03 scailing/nginx.yml" />
         <option value="$PROJECT_DIR$/03 scailing/demo.txt" />
+        <option value="$PROJECT_DIR$/04 scaling qps/demo.txt" />
+        <option value="$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml" />
+        <option value="$PROJECT_DIR$/00 Prep/demo.txt" />
+        <option value="$PROJECT_DIR$/04 StatefullSet/demo.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="325" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="1250" />
+    <option name="x" value="405" />
+    <option name="y" value="30" />
+    <option name="width" value="2189" />
+    <option name="height" value="1564" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,12 +96,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547820720381" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548060458322" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -221,9 +128,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3181208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19936034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -237,7 +144,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4305949" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -254,31 +161,10 @@
     <entry file="file://$PROJECT_DIR$/03 scailing/nginx-service.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/00 Prep/demo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 nginx/nginx.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01 nginx/nginx-service.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 nginx/demo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -288,6 +174,28 @@
     <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/blue.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/green.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03 scailing/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="53" selection-start-line="14" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 scaling qps/demo.txt" />
     <entry file="file://$PROJECT_DIR$/03 scailing/nginx.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -295,31 +203,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03 scailing/demo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="14" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/ops.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/demo.txt">
+    <entry file="file://$PROJECT_DIR$/01 nginx/demo.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02 blue-green-deployment/green.yaml">
+    <entry file="file://$PROJECT_DIR$/01 nginx/nginx.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-services.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00 Prep/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-configmap.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="24" />
+          <folding>
+            <element signature="e#70#113#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 StatefullSet/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="86" />
         </state>
       </provider>
     </entry>

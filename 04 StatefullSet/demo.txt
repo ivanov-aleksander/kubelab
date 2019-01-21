@@ -1,0 +1,106 @@
+#https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
+
+kubectl create -f https://k8s.io/examples/application/mysql/mysql-configmap.yaml
+
+kubectl create -f https://k8s.io/examples/application/mysql/mysql-services.yaml
+
+kubectl create -f mysql-statefulset.yaml
+
+#Loock how adds additional nodes
+########################################################################################################################
+kubectl get pods -l app=mysql --watch
+
+
+
+#Send test queries to the MySQL master
+########################################################################################################################
+
+kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
+  mysql -h mysql-0.mysql <<EOF
+CREATE DATABASE test;
+CREATE TABLE test.messages (message VARCHAR(250));
+INSERT INTO test.messages VALUES ('hello');
+EOF
+
+
+#Use the hostname mysql-read to send test queries to any server that reports being Ready
+########################################################################################################################
+
+kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
+  mysql -h mysql-read -e "SELECT * FROM test.messages"
+
+
+#mysql-read Service distributes connections across servers
+########################################################################################################################
+
+kubectl run mysql-client-loop --image=mysql:5.7 -i -t --rm --restart=Never --\
+  bash -ic "while sleep 1; do mysql -h mysql-read -e 'SELECT @@server_id,NOW()'; done"
+
+
+#Simulating Pod and Node downtime
+########################################################################################################################
+#Break the Readiness Probe
+
+kubectl  get pod -o wide
+kubectl  get ep
+kubectl exec mysql-2 -c mysql -- mv /usr/bin/mysql /usr/bin/mysql.off
+
+kubectl  get pod -o wide
+kubectl  get ep
+
+kubectl run mysql-client-loop --image=mysql:5.7 -i -t --rm --restart=Never --\
+  bash -ic "while sleep 1; do mysql -h mysql-read -e 'SELECT @@server_id,NOW()'; done"
+
+kubectl exec mysql-2 -c mysql -- mv /usr/bin/mysql.off /usr/bin/mysql
+kubectl  get pod -o wide
+kubectl  get ep
+
+
+#delete pods and drain node
+#############################################################
+
+kubectl delete pod mysql-2
+kubectl  get pod -o wide
+kubectl  get ep
+
+
+
+kubectl get pod mysql-2 -o wide
+kubectl drain <node-name> --force --delete-local-data --ignore-daemonsets
+kubectl get pod mysql-2 -o wide --watch
+kubectl  get pod -o wide
+kubectl  get ep
+
+kubectl uncordon <node-name>
+
+Scaling statefullset
+########################################################################################################################
+
+kubectl scale statefulset mysql  --replicas=5
+kubectl get pods -l app=mysql --watch
+kubectl  get ep
+
+kubectl run mysql-client-loop --image=mysql:5.7 -i -t --rm --restart=Never --\
+  bash -ic "while sleep 1; do mysql -h mysql-read -e 'SELECT @@server_id,NOW()'; done"
+
+#verify that these new servers have the data you added before
+#############################################################
+
+kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
+  mysql -h mysql-3.mysql -e "SELECT * FROM test.messages"
+
+kubectl scale statefulset mysql --replicas=3
+kubectl get pods -l app=mysql --watch
+
+#all 5 PVCs still exist, despite having scaled the StatefulSet down to 3
+
+kubectl get pvc -l app=mysql
+
+#Delete statfullSet
+########################################################################################################################
+
+kubectl delete statefulset mysql
+kubectl get pods -l app=mysql
+
+
+ kubectl delete configmap,service,pvc -l app=mysql
