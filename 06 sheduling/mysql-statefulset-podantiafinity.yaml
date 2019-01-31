@@ -23,6 +23,15 @@ spec:
                     values:
                       - custom-1-2048
                       - custom-4-3840
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - mysql
+              topologyKey: kubernetes.io/hostname
       initContainers:
       - name: init-mysql
         image: mysql:5.7

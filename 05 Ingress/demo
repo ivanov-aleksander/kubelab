@@ -1,5 +1,5 @@
 gcloud compute firewall-rules create allow-nginx-http --allow tcp:30380 --description "Incoming http allowed."
-gcloud compute firewall-rules create allow-default-backend --allow tcp:30301 --description "Incoming http allowed."
+gcloud compute firewall-rules create allow-default-web1 --allow tcp:32515 --description "Incoming http allowed."
 gcloud compute firewall-rules create allow-gke-example --allow tcp:32329 --description "Incoming http allowed."
 
 

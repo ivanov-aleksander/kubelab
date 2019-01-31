@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: webserver-affinity
+  name: webserver-nodeselector
 spec:
   replicas: 3 # tells deployment to run 1 pods matching the template
   template: # create pods using pod definition in this template
@@ -12,23 +12,9 @@ spec:
         app: nginx
         type: webserver
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: dedicated
-                operator: In
-                values:
-                - devops
       nodeSelector:
         disk: ssd
         #kubernetes.io/role: tainted_node
-      tolerations:
-      - key: dedicated
-        operator: Equal
-        value: devops
-        effect: NoSchedule
       containers:
       - name: nginx
         image: nginx

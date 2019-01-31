@@ -20,3 +20,6 @@ gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
 
 gcloud container clusters delete "k8s-cluster" --zone "europe-west1-d"
 
+
+
+# image: k8s.gcr.io/pause:2.0

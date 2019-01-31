@@ -7,12 +7,22 @@ spec:
     matchLabels:
       app: mysql
   serviceName: mysql
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
         app: mysql
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:  #or       preferredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/instance-type
+                    operator: In
+                    values:
+                      - custom-1-2048
+                      - custom-4-3840
       initContainers:
       - name: init-mysql
         image: mysql:5.7

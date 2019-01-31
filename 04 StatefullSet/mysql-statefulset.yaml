@@ -79,6 +79,7 @@ spec:
         resources:
           requests:
             cpu: 500m
+            memory: 1Gi
         livenessProbe:
           exec:
             command: ["mysqladmin", "ping"]
@@ -140,16 +141,16 @@ spec:
           # Start a server to send backups when requested by peers.
           exec ncat --listen --keep-open --send-only --max-conns=1 3307 -c \
             "xtrabackup --backup --slave-info --stream=xbstream --host=127.0.0.1 --user=root"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
         volumeMounts:
         - name: data
           mountPath: /var/lib/mysql
           subPath: mysql
         - name: conf
           mountPath: /etc/mysql/conf.d
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
       volumes:
       - name: conf
         emptyDir: {}

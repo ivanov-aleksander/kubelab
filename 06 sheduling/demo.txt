@@ -1,0 +1,72 @@
+gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
+   --machine-type "custom-1-1024" --image-type "GCI" --disk-size "50" \
+   --network "default" --enable-cloud-logging \
+   --no-enable-cloud-monitoring  --num-nodes=2 \
+   --enable-legacy-authorization --cluster-version=1.11.5-gke.5
+
+gcloud container node-pools list --cluster="k8s-cluster"
+gcloud container node-pools create high-mem --cluster=k8s-cluster  --machine-type=custom-1-2048 --disk-size=50 --num-nodes=2
+gcloud container node-pools create high-cpu --cluster=k8s-cluster  --machine-type=custom-4-3840 --disk-size=50 --num-nodes=1
+gcloud container node-pools list --cluster="k8s-cluster"
+kubectl  get node  | nl
+
+
+# Check labels
+kubectl get nodes --show-labels
+kubectl get nodes gke-k8s-cluster-high-cpu-07ed0685-wj1v  --show-labels --no-headers | awk '{print $6}' | tr -s ',' '\n'
+#failure-domain.beta.kubernetes.io/region=europe-west1
+#failure-domain.beta.kubernetes.io/zone=europe-west1-d
+#beta.kubernetes.io/instance-type=custom-1-1024
+
+kubectl  get node -L beta.kubernetes.io/instance-type | nl
+
+kubectl  create -f nginx.yaml
+kubectl  get po -o wide --sort-by=.spec.nodeName
+kubectl scale deployment --replicas=6 webserver-blue
+kubectl  get po -o wide --sort-by=.spec.nodeName
+kubectl  delete -f nginx.yaml
+
+########################################################################################################################
+Deploy DB, be,
+
+kubectl create -f https://k8s.io/examples/application/mysql/mysql-configmap.yaml
+kubectl create -f https://k8s.io/examples/application/mysql/mysql-services.yaml
+kubectl  create -f  mysql-statefulset.yaml
+
+kubectl  get node -L beta.kubernetes.io/instance-type
+kubectl  get po -o wide --sort-by=.spec.nodeName
+
+kubectl  create -f mysql-statefulset-podantiafinity.yaml
+kubectl  get po -o wide --sort-by=.spec.nodeName
+kubectl scale statefulset --replicas=4 mysql
+
+kubectl  create -f be.yaml
+kubectl  get po -o wide
+
+kubectl  create  -f be-podafinity.yaml
+kubectl  get po -o wide
+kubectl  scale deployment be --replicas=8
+kubectl  get po -o wide
+
+########################################################################################################################
+# Add labels on nodes
+kubectl label nodes NODE1 disk=ssd
+kubectl label nodes NODE2 disk=ssd
+kubectl label nodes NODE2 env=prod
+kubectl taint nodes NODE2 env=prod:NoSchedule
+kubectl  get node -L disk
+
+
+kubectl create -f nginx-NodeSelector.yaml
+kubectl  get po -o wide
+kubectl scale deployment --replicas=8 webserver-nodeselector
+kubectl  get po -o wide
+
+
+
+kubectl label nodes NODE1 disk=ssd-
+kubectl label nodes NODE2 disk=ssd-
+kubectl label nodes NODE2 env=prod-
+kubectl taint nodes NODE2 env=prod:NoSchedule-
+
+#https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
