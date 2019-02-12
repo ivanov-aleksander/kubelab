@@ -1,3 +1,5 @@
+#Create cluster
+########################################################################################################################
 gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
    --machine-type "custom-1-1024" --image-type "GCI" --disk-size "50" \
    --network "default" --enable-cloud-logging \
@@ -9,6 +11,19 @@ gcloud container node-pools create high-mem --cluster=k8s-cluster  --machine-typ
 gcloud container node-pools create high-cpu --cluster=k8s-cluster  --machine-type=custom-4-3840 --disk-size=50 --num-nodes=1
 gcloud container node-pools list --cluster="k8s-cluster"
 kubectl  get node  | nl
+
+#Deploy app mysql,be,fe
+########################################################################################################################
+kubectl  create -f services.yaml
+kubectl  create  -f mysql-configmap.yaml
+kubectl  create -f mysql-statefulset.yaml
+kubectl  create -f be.yaml
+kubectl  create -f fe.yaml
+kubectl  create -f nginx.yaml
+
+kubectl get pod -o wide | sort -k7
+
+
 
 
 # Check labels

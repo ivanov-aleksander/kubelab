@@ -10,4 +10,4 @@ spec:
       protocol: TCP
   selector:
     type: webserver
-    color: blue
+             color: blue

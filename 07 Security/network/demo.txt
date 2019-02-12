@@ -1,0 +1,56 @@
+#https://github.com/ahmetb/kubernetes-network-policy-recipes
+
+#deny all trafic to pod
+########################################################################################################################
+
+kubectl run web --image=nginx --labels app=web,env=prod --expose --port 80
+
+kubectl run --rm -i -t --image=alpine test-$RANDOM -- wget -qO- http://web
+
+kubectl apply -f web-deny-all.yaml
+
+kubectl run --rm -i -t --image=alpine test-$RANDOM -- wget -qO- --timeout=2 http://web
+
+
+kubectl delete deploy web
+kubectl delete service web
+kubectl delete networkpolicy web-deny-all
+
+
+Limit traffic
+########################################################################################################################
+
+kubectl run apiserver --image=nginx --labels app=bookstore,role=api --expose --port 80
+
+kubectl apply -f api-allow.yaml
+
+kubectl run test-$RANDOM --rm -i -t --image=alpine -- wget -qO- --timeout=2 http://apiserver
+
+kubectl run test-$RANDOM --rm -i -t --image=alpine --labels app=bookstore,role=frontend -- wget -qO- --timeout=2 http://apiserver
+
+
+kubectl delete deployment apiserver
+kubectl delete service apiserver
+kubectl delete networkpolicy api-allow
+
+
+#Deny all trafic from other namespaces
+########################################################################################################################
+
+kubectl create namespace secondary
+
+kubectl run web --namespace secondary --image=nginx  --labels=app=web --expose --port 80
+
+kubectl apply web-deny-other-namespaces.yaml
+
+
+kubectl run test-$RANDOM --namespace=default --rm -i -t --image=alpine -- wget -qO- --timeout=2 http://web.secondary
+kubectl run test-$RANDOM --namespace=secondary --rm -i -t --image=alpine -- wget -qO- --timeout=2 http://web.secondary
+
+kubectl delete deployment web -n secondary
+kubectl delete service web -n secondary
+kubectl delete networkpolicy web-deny-other-namespaces -n secondary
+kubectl delete namespace secondary
+
+
+

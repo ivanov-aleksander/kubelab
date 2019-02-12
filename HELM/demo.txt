@@ -1,0 +1,78 @@
+#Create Cluster
+########################################################################################################################
+
+gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
+   --machine-type "custom-2-2048" --image-type "GCI" --disk-size "50" \
+   --network "default" --enable-cloud-logging \
+   --no-enable-cloud-monitoring  --num-nodes=3 \
+   --enable-legacy-authorization --cluster-version=1.11.5-gke.5
+
+
+
+
+#Installing the Helm Client
+########################################################################################################################
+
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+#Initialize Helm and Install Tiller
+###################################
+
+helm init
+kubectl --namespace kube-system get pods | grep tiller
+
+
+#Create chart
+########################################################################################################################
+
+helm create my-awsome-chart
+tree my-awsome-chart/
+
+#Check
+###################################
+
+helm install --dry-run --debug .
+
+helm install --dry-run --debug . --set service.internalPort=8080
+
+
+helm install --name example . --set service.type=LoadBalancer
+
+
+Package chart
+###################################
+
+helm package ./my-awsome-chart
+
+helm install --name example2 my-awsome-chart-0.1.0.tgz --set service.type=LoadBalancer
+
+kubectl  get  configmap  --all-namespaces
+
+
+#Charts repository
+########################################################################################################################
+#https://github.com/helm/charts/tree/master/stable
+
+helm repo update
+helm search
+helm search wordpress
+helm inspect values stable/wordpress
+helm inspect readme stable/wordpress
+
+
+wget https://raw.githubusercontent.com/helm/charts/master/stable/wordpress/values-production.yaml
+
+helm install --name testwordpress --set "wordpressBlogName=Flant's Blog!" --set "persistence.enabled=false" --set "service.type=LoadBalancer" -f values-production.yaml stable/wordpress
+
+#helm releases
+###################################
+helm list
+
+helm upgrade   testwordpress --set "image.tag=4.9.8-ol-7" --set "wordpressBlogName=Flant's Blog!" --set "persistence.enabled=false" --set "service.type=LoadBalancer" -f values-production.yaml stable/wordpress
+kubectl  get po
+
+
+helm  ls
+helm history testwordpress
+helm rollback testwordpress 1
+

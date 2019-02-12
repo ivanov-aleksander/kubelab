@@ -20,16 +20,14 @@ spec:
                       - mysql
               topologyKey: kubernetes.io/hostname
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-            - weight: 100
-              podAffinityTerm:
-                labelSelector:
-                  matchExpressions:
-                    - key: app
-                      operator: In
-                      values:
-                        - be
-                topologyKey: kubernetes.io/hostname
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - be
+              topologyKey: kubernetes.io/hostname
       containers:
         - name: be
           image: k8s.gcr.io/pause:2.0

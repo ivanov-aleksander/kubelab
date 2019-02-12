@@ -23,3 +23,10 @@ gcloud container clusters delete "k8s-cluster" --zone "europe-west1-d"
 
 
 # image: k8s.gcr.io/pause:2.0
+
+
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+kubectl proxy
+http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy
+
+gcloud auth  print-access-token.

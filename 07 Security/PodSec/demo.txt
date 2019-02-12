@@ -1,0 +1,50 @@
+#Using the node’s network namespace in a pod
+########################################################################################################################
+
+kubectl  create  -f pod-with-host-network.yaml
+kubectl exec pod-with-host-network ifconfig
+
+
+
+Using the node’s PID and IPC namespaces
+########################################################################################################################
+
+kubectl  create  -f pod-with-host-pid-and-ipc.yaml
+kubectl exec pod-with-host-pid-and-ipc ps aux
+
+
+Running a container as a specific user
+########################################################################################################################
+
+kubectl create -f pod-as-user-guest.yaml
+kubectl exec pod-as-user-guest id
+
+
+
+Preventing a container from running as root
+########################################################################################################################
+
+kubectl create -f pod-run-as-non-root.yaml
+kubectl get po pod-run-as-non-root
+
+
+Running pods in privileged mode
+########################################################################################################################
+
+kubectl create -f pod-privileged.yaml
+kubectl exec -it pod-privileged ls /dev
+
+
+Adding individual kernel capabilities to a container
+########################################################################################################################
+
+kubectl create -f pod-add-settime-capability.yaml
+kubectl exec -it pod-add-settime-capability -- date +%T -s "12:00:00"
+kubectl exec -it pod-add-settime-capability -- date
+
+
+Preventing processes from writing to the container’s filesystem
+########################################################################################################################
+
+kubectl create -f pod-with-readonly-filesystem.yaml
+kubectl exec -it pod-with-readonly-filesystem touch /new-file
