@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e08f74fa-6a8e-4f49-a733-072b9afcb6c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/06 sheduling/pt1/mysql-configmap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06 sheduling/pt1/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/PodSec/demo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/network/api-allow.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/network/default-deny-all.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/network/demo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/network/web-deny-all.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07 Security/network/web-deny-other-namespaces.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELM/demo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00 Prep/demo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00 Prep/demo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02 blue-green-deployment/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/02 blue-green-deployment/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06 sheduling/be-podafinity.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/06 sheduling/be-podafinity.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06 sheduling/be.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/06 sheduling/pt1/be.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06 sheduling/demo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/06 sheduling/demo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06 sheduling/mysql-statefulset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/06 sheduling/pt1/mysql-statefulset.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06 sheduling/nginx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/06 sheduling/pt1/nginx.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELM/demo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HELM/demo.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +16,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HELM/demo.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="226">
+              <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="9" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05 Ingress/ingress.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="15" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="91" column="47" lean-forward="true" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="66" />
+              <folding>
+                <element signature="e#70#113#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HELM/my-awsome-chart/values.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51" />
           </provider>
         </entry>
       </file>
@@ -121,7 +133,30 @@
             <path>
               <item name="Laba" type="b2602c69:ProjectViewProjectNode" />
               <item name="Laba" type="462c0819:PsiDirectoryNode" />
+              <item name="04 StatefullSet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba" type="462c0819:PsiDirectoryNode" />
+              <item name="06 sheduling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba" type="462c0819:PsiDirectoryNode" />
               <item name="HELM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba" type="462c0819:PsiDirectoryNode" />
+              <item name="HELM" type="462c0819:PsiDirectoryNode" />
+              <item name="my-awsome-chart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba" type="462c0819:PsiDirectoryNode" />
+              <item name="HELM" type="462c0819:PsiDirectoryNode" />
+              <item name="my-awsome-chart" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,7 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549889963176" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550055390130" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="C:/terraform" />
   </component>
@@ -183,6 +218,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -198,7 +234,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.56229687" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.56229687" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -260,13 +296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05 Ingress/ingress.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -333,16 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
-          <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
-          <folding>
-            <element signature="e#70#113#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-configmap.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -368,11 +387,6 @@
         <state relative-caret-position="408">
           <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HELM/my-awsome-chart/values.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HELM/my-awsome-chart/templates/NOTES.txt">
@@ -524,10 +538,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HELM/my-awsome-chart/values.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05 Ingress/ingress.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 StatefullSet/mysql-statefulset.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="91" column="47" lean-forward="true" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="66" />
+          <folding>
+            <element signature="e#70#113#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HELM/demo.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="226">
+          <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="9" />
         </state>
       </provider>
     </entry>

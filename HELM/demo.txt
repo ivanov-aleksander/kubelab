@@ -1,3 +1,4 @@
+#https://docs.helm.sh/using_helm/#three-big-concepts
 #Create Cluster
 ########################################################################################################################
 
@@ -33,8 +34,7 @@ tree my-awsome-chart/
 
 helm install --dry-run --debug .
 
-helm install --dry-run --debug . --set service.internalPort=8080
-
+helm install --dry-run --debug . --set service.internalPort=8080 --set image.tag=1.15
 
 helm install --name example . --set service.type=LoadBalancer
 
@@ -63,10 +63,12 @@ helm inspect readme stable/wordpress
 wget https://raw.githubusercontent.com/helm/charts/master/stable/wordpress/values-production.yaml
 
 helm install --name testwordpress --set "wordpressBlogName=Flant's Blog!" --set "persistence.enabled=false" --set "service.type=LoadBalancer" -f values-production.yaml stable/wordpress
+helm  status testwordpress
 
 #helm releases
 ###################################
 helm list
+
 
 helm upgrade   testwordpress --set "image.tag=4.9.8-ol-7" --set "wordpressBlogName=Flant's Blog!" --set "persistence.enabled=false" --set "service.type=LoadBalancer" -f values-production.yaml stable/wordpress
 kubectl  get po
