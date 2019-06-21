@@ -13,7 +13,7 @@ gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
    --machine-type "custom-1-1024" --image-type "GCI" --disk-size "100" \
    --network "default" --enable-cloud-logging \
    --no-enable-cloud-monitoring --enable-autoscaling --min-nodes="2" --max-nodes="10" \
-   --enable-legacy-authorization --cluster-version=1.11.5-gke.5
+   --enable-legacy-authorization --cluster-version=1.13.6-gke.5
 
 ########################################################################################################################
 #Delete cluster
