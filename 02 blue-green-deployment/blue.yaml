@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: argoproj
-        image: argoproj/rollouts-demo:blue
+        image: alexmt/rollouts-demo:blue
         ports:
-        - containerPort: 8080
+        - containerPort: 80

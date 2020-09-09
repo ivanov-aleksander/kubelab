@@ -4,9 +4,10 @@ metadata:
   name: argoproj
 spec:
   type: LoadBalancer
+  sessionAffinity: None
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
   selector:
     color: blue
