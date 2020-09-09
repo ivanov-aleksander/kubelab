@@ -1,27 +1,6 @@
-# Create persistent disks for nginx 
-gcloud compute disks create webcontent-blue webcontent-green --zone europe-west1-d --size 1GB
-
-# Create temporary container with NGINX
-kubectl create -f ops.yaml
-# List all pods in the namespace
-kubectl get pods
-# Run command in existing pod (1 container case)
-kubectl exec -it ops -- bash
-# Copy files
-cp /usr/share/nginx/html/* nginx-blue/
-cp /usr/share/nginx/html/* nginx-green/
-sed -i -e 's/Welcome to nginx!/Welcome to blue nginx!/g' nginx-blue/index.html
-sed -i -e 's/Welcome to nginx!/Welcome to green nginx!/g' nginx-green/index.html
-ls /nginx-blue/index.html
-ls /nginx-green/index.html
-exit
-# Delete Deployment
-kubectl delete -f ops.yaml
-
-
-
 kubectl create -f service.yaml
-kubectl get svc webserver
+kubectl get svc argoproj 
+
 kubectl create -f blue.yaml
 kubectl create -f green.yaml
 
