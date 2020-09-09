@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argoproj
+  labels:
+    app: argoproj
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: argoproj
+  template:
+    metadata:
+      labels:
+        app: argoproj
+    spec:
+      containers:
+      - name: argoproj
+        image: argoproj/rollouts-demo:blue
+        ports:
+        - containerPort: 8080

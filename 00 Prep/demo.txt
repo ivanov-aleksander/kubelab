@@ -9,10 +9,13 @@ gcloud components install kubectl
 
 https://cloud.google.com/kubernetes-engine/release-notes
 
+gcloud services enable container.googleapis.com --project ${PROJECT_ID}
+
 gcloud container clusters create "k8s-cluster"  --zone "europe-west1-d" \
    --machine-type "custom-1-1024" --image-type "GCI" --disk-size "100" \
-   --network "default" --enable-cloud-logging \
-   --no-enable-cloud-monitoring --enable-autoscaling --min-nodes="2" --max-nodes="10" \
+   --network "default"  \
+   --enable-autoscaling --min-nodes="2" --max-nodes="10" \
+   --cluster-version=1.16.13-gke.1
 
 
 ########################################################################################################################
