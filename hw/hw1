@@ -1,0 +1,38 @@
+Создайте деплоймент для Jenkins
+1. Создать сикрет с паролем админа для Jenkins  В Jenkins  контейнере обьявите env переменную ADMIN_PASSWORD со значением из сикрета.
+2. Создать Configmap который будет содержать список плагинов для установки. Например:
+
+kubernetes:1.18.1
+workflow-job:2.33
+workflow-aggregator:2.6
+credentials-binding:1.19
+git:3.11.0
+
+3. Создать init container. В данный контейнер будет монтироватся файл со списком плагинов по пути /var/jenkins_config/plugins.txt . Данный initcontainer также будет шарить с основным контейнером волюм в который положит плагины.  Initcontainer должен запускать след команду:
+
+    # Install missing plugins
+    cp /var/jenkins_config/plugins.txt /var/jenkins_home;
+    rm -rf /usr/share/jenkins/ref/plugins/*.lock
+    /usr/local/bin/install-plugins.sh `echo $(cat /var/jenkins_home/plugins.txt)`;
+    # Copy plugins to shared volume
+    yes n | cp -i /usr/share/jenkins/ref/plugins/* /var/jenkins_plugins/;
+
+Для init  контейнера используйте имедж Jenkins  т.к. в нем есть скрипт /usr/local/bin/install-plugins.sh
+
+4. Создайте 2 тестовые джобы (что будет в джобе не важно). Скопируйте xml  этих ждоб из /var/jenkins_home/jobs/$job/config.xml       и создайте конфигмапу которая будет содерать эти 2 джобы
+4.1 Создать деплоймент для SonarQube
+4.2 Возьмите пример https://github.com/SonarSource/sonar-scanning-examples/tree/master/sonarqube-scanner-maven Можете напилить пайплайн который будет данный код билдить и прогонять сонар. Там все в readme  
+4.3 Настроить плагин кубирнетиса, чтобы билдагенты ранились в подах. Hаписано как настроить в Jenkins плагин для кубернетиса https://jenkins.io/blog/2018/09/14/kubernetes-and-secret-agents/
+
+5. Создайте инит контейнер, примонтируйте туда 2 файла из конфигмапы в папку /var/jenkins_jobs.  Инит контейнер при старте будет запускать след скрипт:
+
+    for job in $(ls /var/jenkins_jobs); do
+      mkdir -p /var/jenkins_home/jobs/$job
+      yes  | cp -i /var/jenkins_jobs/$job /var/jenkins_home/jobs/$job/config.xml
+
+
+6. Добавьте PersistentVolumeClaim к вашему Jenkins   чтобы в клауде запросился volume и примонтируйте его в /var/jenkins_home  Тем самым стейт вашего Jenkins будет храниться в клауде
+7.  Ingress.   
+7.1 Сгенерируйте tls    сертификат для Jenkins и для  SonarQube (например jenkins.companydomain.com и sonar.maydomain.com) .  Положите их в сикреты. 
+7.2 Настройте ingress чтобы он по этим доменам редиректил вас на Jenkins и Sonarqube и tls брал из сикрета
+7.3 Добавьте в себе в хосты jenkins.companydomain.com и sonar.maydomain.com и ip   адрес вашего ингресса. Проверьте что вы можете ходить через ингресс.

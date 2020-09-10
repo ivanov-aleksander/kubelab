@@ -1,0 +1,9 @@
+Поводу ingress вот вам инструкция https://cloud.google.com/community/tutorials/nginx-ingress-gke
+Домашка:
+1. Установить nginx-ingress используя helm
+2. Установить Jenkins используя helm
+2.1 В values указать список плагинов
+2.2 В values активировать ingress
+
+3. Установить Sonarqube используя helm
+4. Пайплайн из предыдущей лабы

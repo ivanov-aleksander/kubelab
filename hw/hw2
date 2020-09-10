@@ -1,0 +1,2 @@
+Создать storage class для ssd дисков.
+Взять пример со statefullset  и настроить чтобы mysql использовал ssd диски.+
